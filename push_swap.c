@@ -6,7 +6,7 @@
 /*   By: bmahdi <bmahdi@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 16:12:59 by bmahdi            #+#    #+#             */
-/*   Updated: 2023/11/30 19:00:41 by bmahdi           ###   ########.fr       */
+/*   Updated: 2023/12/01 20:23:57 by bmahdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,3 +114,4 @@ int	main(int argc, char **argv)
 		sorting_stack(&a, &b, arry, size);
 
 }
+
