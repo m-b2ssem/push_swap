@@ -6,7 +6,7 @@
 /*   By: bmahdi <bmahdi@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 10:10:24 by bmahdi            #+#    #+#             */
-/*   Updated: 2023/11/29 00:30:19 by bmahdi           ###   ########.fr       */
+/*   Updated: 2023/12/02 03:07:18 by bmahdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,11 @@ static int	ft_split_arg(int *arry, int *i, char **av)
 		str = *av;
 		tmp = ft_atoi(*av++);
 		if (tmp > INT_MAX || tmp < INT_MIN || !ft_check_double(arry, *i, tmp))
+		{
+			free(arry);
+			free_strings(ptr);
 			ft_erour();
+		}
 		arry[(*i)++] = (int)tmp;
 		free(str);
 	}
@@ -46,7 +50,7 @@ static int	ft_split_arg(int *arry, int *i, char **av)
 int	*fill_arry(char **av, int size, int **arry)
 {
 	int		i;
-
+	
 	if (!av)
 		return (NULL);
 	*arry = ft_calloc(size, sizeof(int));
