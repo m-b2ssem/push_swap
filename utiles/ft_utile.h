@@ -6,7 +6,7 @@
 /*   By: bmahdi <bmahdi@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 20:40:19 by bmahdi            #+#    #+#             */
-/*   Updated: 2023/12/02 02:47:16 by bmahdi           ###   ########.fr       */
+/*   Updated: 2023/12/03 01:01:09 by bmahdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ int		*fill_arry(char **av, int size, int **arry);
 void	fill_stack(int *arry, int size, t_stack *a, t_stack *b);
 int		sorting_arry(t_stack a, int **arry, int size);
 void	sorting_stack(t_stack *a, t_stack *b, int *arry, int size);
+int     ft_is_valid(char *arg);
 
 #endif

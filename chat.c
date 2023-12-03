@@ -69,9 +69,6 @@ int	main(int argc, char **argv)
 	t_stack	b;
 	int		*arry;
 	int		size;
-	char *test[2] = {"test", " i "};
-	argv = test;
-	argc = 2;
 	
 	if (argc == 1)
 		return (1);

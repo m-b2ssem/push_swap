@@ -6,11 +6,12 @@
 /*   By: bmahdi <bmahdi@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 16:12:59 by bmahdi            #+#    #+#             */
-/*   Updated: 2023/12/01 23:22:09 by bmahdi           ###   ########.fr       */
+/*   Updated: 2023/12/03 01:02:00 by bmahdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "./utiles/ft_utile.h"
 
 void	sort_tree(t_stack *a, t_stack *b)
 {
@@ -96,8 +97,10 @@ void	sort_small_size(t_stack *a, t_stack *b, int *arry, int size)
 
 void free_stacks(t_stack *a, t_stack *b)
 {
-    free(a->arry);
-    free(b->arry);
+	if (a->arry)
+		free(a->arry);
+    if (b->arry)
+		free(b->arry);
 }
 
 
@@ -110,6 +113,11 @@ int	main(int argc, char **argv)
 	
 	if (argc == 1)
 		return (1);
+	if (argc == 2 && ft_is_valid(argv[1]))
+	{
+		ft_erour();
+		return (1);
+	}
 	arry = NULL;
 	size = ft_check_arg(argv, argc, &arry);
 	fill_stack(arry, size, &a, &b);

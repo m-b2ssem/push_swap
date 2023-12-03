@@ -6,7 +6,7 @@
 /*   By: bmahdi <bmahdi@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 23:24:10 by bmahdi            #+#    #+#             */
-/*   Updated: 2023/12/02 02:47:32 by bmahdi           ###   ########.fr       */
+/*   Updated: 2023/12/03 01:00:32 by bmahdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void free_strings(char **ptr)
     free(ptr);
 }
 
-static int	ft_is_valid(char *arg)
+int	ft_is_valid(char *arg)
 {
 	if (!arg)
 		return (0);
