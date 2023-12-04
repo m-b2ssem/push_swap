@@ -6,7 +6,7 @@
 /*   By: bmahdi <bmahdi@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 16:12:59 by bmahdi            #+#    #+#             */
-/*   Updated: 2023/12/03 01:02:00 by bmahdi           ###   ########.fr       */
+/*   Updated: 2023/12/04 12:09:10 by bmahdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,10 +114,7 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (1);
 	if (argc == 2 && ft_is_valid(argv[1]))
-	{
 		ft_erour();
-		return (1);
-	}
 	arry = NULL;
 	size = ft_check_arg(argv, argc, &arry);
 	fill_stack(arry, size, &a, &b);
