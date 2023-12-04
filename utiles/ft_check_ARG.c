@@ -6,21 +6,23 @@
 /*   By: bmahdi <bmahdi@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 23:24:10 by bmahdi            #+#    #+#             */
-/*   Updated: 2023/12/03 01:00:32 by bmahdi           ###   ########.fr       */
+/*   Updated: 2023/12/04 23:32:28 by bmahdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_utile.h"
 
-void free_strings(char **ptr)
+void	free_strings(char **ptr)
 {
-    char **temp = ptr;
-    while (*temp)
-    {
-        free(*temp);
-        temp++;
-    }
-    free(ptr);
+	char	**temp;
+
+	temp = ptr;
+	while (*temp)
+	{
+		free(*temp);
+		temp++;
+	}
+	free(ptr);
 }
 
 int	ft_is_valid(char *arg)

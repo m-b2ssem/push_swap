@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "push_swap.h"
 
 static void	do_rule(t_stack *a, t_stack *b, char *str)

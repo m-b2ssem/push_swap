@@ -16,7 +16,7 @@ void	rra(t_stack *a)
 {
 	int	tmp;
 	int	*end;
-	
+
 	if (a->end < a->top)
 		return ;
 	tmp = *a->end;

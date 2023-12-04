@@ -17,3 +17,13 @@ void	ft_erour(void)
 	ft_putstr_fd("Error\n", 2);
 	exit(1);
 }
+
+void	free_memory(t_stack *a, t_stack *b, int *arry)
+{
+	if (a->arry)
+		free(a->arry);
+	if (b->arry)
+		free(b->arry);
+	if (arry)
+		free(arry);
+}

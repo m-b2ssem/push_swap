@@ -6,7 +6,7 @@
 /*   By: bmahdi <bmahdi@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 16:12:59 by bmahdi            #+#    #+#             */
-/*   Updated: 2023/12/04 13:00:11 by bmahdi           ###   ########.fr       */
+/*   Updated: 2023/12/04 23:27:02 by bmahdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,27 +95,16 @@ void	sort_small_size(t_stack *a, t_stack *b, int *arry, int size)
 		sort_tree(a, b);
 }
 
-void free_memory(t_stack *a, t_stack *b, int *arry)
-{
-	if (a->arry)
-		free(a->arry);
-    if (b->arry)
-		free(b->arry);
-	if (arry)
-		free(arry);
-}
-
-
 int	main(int argc, char **argv)
 {
 	t_stack	a;
 	t_stack	b;
 	int		*arry;
 	int		size;
-	
+
 	if (argc == 1)
 		return (1);
-	if ((argc == 2 && ft_is_valid(argv[1])) ||  argv[1][0] == ' ')
+	if ((argc == 2 && ft_is_valid(argv[1])) || argv[1][0] == ' ')
 		return (0);
 	arry = NULL;
 	size = ft_check_arg(argv, argc, &arry);
@@ -132,5 +121,3 @@ int	main(int argc, char **argv)
 	free_memory(&a, &b, arry);
 	return (0);
 }
-
-

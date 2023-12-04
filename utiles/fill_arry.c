@@ -6,10 +6,9 @@
 /*   By: bmahdi <bmahdi@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 10:10:24 by bmahdi            #+#    #+#             */
-/*   Updated: 2023/12/04 13:08:58 by bmahdi           ###   ########.fr       */
+/*   Updated: 2023/12/04 23:29:57 by bmahdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ft_utile.h"
 
@@ -41,16 +40,15 @@ static int	ft_split_arg(int *arry, int *i, char **av)
 			ft_erour();
 		}
 		arry[(*i)++] = (int)tmp;
-		free(str);
 	}
-	free(ptr);
+	free_strings(ptr);
 	return (*i);
 }
 
 int	*fill_arry(char **av, int size, int **arry)
 {
 	int		i;
-	
+
 	if (!av)
 		return (NULL);
 	*arry = ft_calloc(size, sizeof(int));
