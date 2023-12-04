@@ -105,7 +105,7 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (1);
 	if ((argc == 2 && ft_is_valid(argv[1])) || argv[1][0] == ' ')
-		return (0);
+		ft_erour();
 	arry = NULL;
 	size = ft_check_arg(argv, argc, &arry);
 	fill_stack(arry, size, &a, &b);
