@@ -6,7 +6,7 @@
 /*   By: bmahdi <bmahdi@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 16:12:59 by bmahdi            #+#    #+#             */
-/*   Updated: 2023/12/04 12:09:10 by bmahdi           ###   ########.fr       */
+/*   Updated: 2023/12/04 13:00:11 by bmahdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,12 +95,14 @@ void	sort_small_size(t_stack *a, t_stack *b, int *arry, int size)
 		sort_tree(a, b);
 }
 
-void free_stacks(t_stack *a, t_stack *b)
+void free_memory(t_stack *a, t_stack *b, int *arry)
 {
 	if (a->arry)
 		free(a->arry);
     if (b->arry)
 		free(b->arry);
+	if (arry)
+		free(arry);
 }
 
 
@@ -113,23 +115,21 @@ int	main(int argc, char **argv)
 	
 	if (argc == 1)
 		return (1);
-	if (argc == 2 && ft_is_valid(argv[1]))
-		ft_erour();
+	if ((argc == 2 && ft_is_valid(argv[1])) ||  argv[1][0] == ' ')
+		return (0);
 	arry = NULL;
 	size = ft_check_arg(argv, argc, &arry);
 	fill_stack(arry, size, &a, &b);
 	if (sorting_arry(a, &arry, size))
 	{
-		free_stacks(&a, &b);
-		free(arry);
+		free_memory(&a, &b, arry);
 		return (0);
 	}
 	if (size < 7)
 		sort_small_size(&a, &b, arry, size);
 	else
 		sorting_stack(&a, &b, arry, size);
-	free_stacks(&a, &b);
-	free(arry);
+	free_memory(&a, &b, arry);
 	return (0);
 }
 
